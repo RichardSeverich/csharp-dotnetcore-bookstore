@@ -1,4 +1,4 @@
-# Bookstore
+# Bookstore 📗
 
 This projet is using dotnet version 2.1.700
 This is a API project example with authentication.
@@ -9,13 +9,16 @@ This is a API project example with authentication.
 2. Install dotnet version 2.1.700
 3. Optional docker.
 
-## Installation 🔧
+## Installation 🔨
+ 
+
+## Configuration 🔧
+
+ 
+## Diagrams 💎
 
 
-## Diagrams
-
-
-## Usage
+## Usage 🔍
 
 ### USERS
 
@@ -93,7 +96,7 @@ DELETE ITEMS
 localhost:8080/api/v1/items/1001
 ```
 
-## Contributing 🖇️
+## Contributing 💡
 
 1. Fork it!
 2. Create your feature branch: `git checkout -b issue/1001`
@@ -101,7 +104,7 @@ localhost:8080/api/v1/items/1001
 4. Push to the branch: `git push origin issue/1001`
 5. Submit a pull request.
 
-## MIT License 📄
+## MIT License 📃
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
