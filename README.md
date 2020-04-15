@@ -1,13 +1,12 @@
-# java-spring-sales
+# Bookstore
 
-This projet is using spring framework.
-
-This project was performed using Java Spring framework with MySQL data bases, also this project is using Gradle for configurate dependencies, jacoco code coverage, check style, find bugs, Dependency injection, Strategy Design pattern and generics.
+This projet is using dotnet version 2.1.700
+This is a API project example with authentication.
 
 ## Prerequisites 🚀
 
 1. Install Windows 10 or Linux
-2. Install dotnet version dotnet --version
+2. Install dotnet version 2.1.700
 3. Optional docker.
 
 ## Installation 🔧
