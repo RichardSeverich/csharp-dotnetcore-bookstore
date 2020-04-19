@@ -21,59 +21,60 @@ dotnet new webapi
 
 ## Configuration 🔧
 
-
-1. start the app on:
+1. Run app with the following command:
 
 ```
-https://localhost:5001/api/values
+dotnet run
+```
 
+2. start the app on:
+
+```
+http://localhost:5000/
+https://localhost:5001/
 ```
  
 ## Diagrams 💎
 
 
-## Usage 🔍
+## EnD Points 🔍
 
-### USERS
+### Projects
 
 ```
-GET USERS
-{Host}:{Port}/api/v1/users
-{Host}:{Port}/api/v1/users/{user_id}
-localhost:8080/api/v1/users
-localhost:8080/api/v1/users/5814525
+GET PROJECTS
+{Host}:{Port}/api/v1/projects
+{Host}:{Port}/api/v1/projects/{project_id}
+https://localhost:5001/api/projects
+https://localhost:5001/api/projects/c903a85d
 
-POST USERS
-{Host}:{Port}/api/v1/users
-localhost:8080/api/v1/users
+POST PROJECTS
+{Host}:{Port}/api/v1/projects
+https://localhost:5001/api/projects
+BODY:
+[
+    {
+        "name": "Proyecto Seguridad",
+        "description": "Proyecto de Seguridad",
+        "state": "Inactivo",
+        "createdDate": "27-05-2019"
+    }
+]
+
+PUT PROJECTS
+{Host}:{Port}/api/v1/projects/{project_id}
+localhost:8080/api/v1/projects/c903a85d
 BODY:
 {
-    "id": "5814525",
-    "password": "pass123",
-    "name": "Sheldon",
-    "lastName": "Cooper",
-    "birthDate": "1994-05-26",
-    "email": "Sheldon.Cooper@gmail.com",
-    "type": "admin"
+   "name": "Proyecto Seguridad",
+   "description": "Proyecto de Seguridad",
+   "state": "Inactivo",
+   "createdDate": "27-05-2019"
 }
 
-PUT USERS
-{Host}:{Port}/api/v1/users/{user_id}
-localhost:8080/api/v1/users/5814527
-BODY:
-{
-    "id": "5814525",
-    "password": "secret123",
-    "name": "Sheldon",
-    "lastName": "Cooper",
-    "birthDate": "1994-05-26",
-    "email": "Sheldon_Cooper@gmail.com",
-    "type": "seller"
-}
-
-DELETE USERS
-{Host}:{Port}/api/v1/users/{user_id}
-localhost:8080/api/v1/users/5814527
+DELETE PROJECTS
+{Host}:{Port}/api/v1/projects/{project_id}
+https://localhost:5001/api/projects/c903a85d
 ```
 
 ### ITEMS
