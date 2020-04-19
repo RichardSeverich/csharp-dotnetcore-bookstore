@@ -8,6 +8,8 @@ this project was created with the following command:
 dotnet new webapi
 ```
 
+This project is using UseInMemory Database, Entity Framework Core and Dependency injection.
+
 ## Prerequisites 🚀
 
 1. Install Windows 10 or Linux
@@ -35,7 +37,6 @@ https://localhost:5001/
 ```
  
 ## Diagrams 💎
-
 
 ## End Points 🔍
 
@@ -114,6 +115,17 @@ DELETE TASKS
 {Host}:{Port}/api/v1/tasks/{task_id}
 https://localhost:5001/api/projects/c903a85d
 ```
+## Postman 🔦
+
+Configuration
+<p align="center">
+  <img src="Documentation/postman-configuration.jpg">
+</p>
+
+Get Request
+<p align="center">
+  <img src="Documentation/get-example.jpg">
+</p>
 
 ## Contributing 💡
 
