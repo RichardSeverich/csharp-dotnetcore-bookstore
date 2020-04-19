@@ -13,6 +13,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
 using csharp_dotnetcore_projects.Models;
+using csharp_dotnetcore_projects.Utils;
 
 namespace csharp_dotnetcore_projects
 {
@@ -35,7 +36,7 @@ namespace csharp_dotnetcore_projects
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ApplicationDbContext applicationDbContext)
         {
             if (env.IsDevelopment())
             {
@@ -48,6 +49,10 @@ namespace csharp_dotnetcore_projects
 
             app.UseHttpsRedirection();
             app.UseMvc();
+
+            // Set Mock Data
+            MockDataProjects mockDataProjects = new MockDataProjects(applicationDbContext);
+            mockDataProjects.SetData();
         }
     }
 }

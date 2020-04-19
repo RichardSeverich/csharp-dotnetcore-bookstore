@@ -16,6 +16,7 @@ namespace csharp_dotnetcore_projects.Controllers
 
         private ApplicationDbContext context;
 
+        // ApplicationDbContext is injected by dependency injection.
         public ProjectsController(ApplicationDbContext context)
         {
             this.context = context;
@@ -29,22 +30,51 @@ namespace csharp_dotnetcore_projects.Controllers
         }
 
         // GET api/projects/5
-        [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
+        [HttpGet("{id}", Name ="GetById")]
+        public ActionResult<Project> Get(string id)
         {
-            return "Project";
+            var projectFound = context.Projects
+                .FirstOrDefault(project => project.Id.Equals(id));
+            if (projectFound == null)
+            {
+                return NotFound();
+            }
+            return Ok(projectFound);
         }
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody] string value)
+        public ActionResult<Project> Post([FromBody] Project value)
         {
+            if (ModelState.IsValid)
+            {
+                context.Projects.Add(value);
+                context.SaveChanges();
+                return new CreatedAtRouteResult("GetById", new { id = value.Id});
+            }
+            return BadRequest(ModelState);
         }
 
         // PUT api/values/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public ActionResult<Project> Put(string id, [FromBody] Project value)
         {
+            var projectFound = context.Projects
+                .FirstOrDefault(project => project.Id.Equals(id));
+            if (projectFound == null)
+            {
+                return NotFound();
+            }
+            if (!ModelState.IsValid) {
+                return BadRequest(ModelState);
+            }
+            projectFound.Name = value.Name;
+            projectFound.Description = value.Description;
+            projectFound.State = value.State;
+            projectFound.CreatedDate = value.CreatedDate;
+            context.Entry(projectFound).State = EntityState.Modified;
+            context.SaveChanges();
+            return Ok(projectFound);
         }
 
         // DELETE api/values/5
