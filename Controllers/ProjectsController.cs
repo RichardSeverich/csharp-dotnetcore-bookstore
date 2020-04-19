@@ -1,9 +1,10 @@
 using System;
 using System.Collections.Generic;
-using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+
 using csharp_dotnetcore_projects.Models;
 
 namespace csharp_dotnetcore_projects.Controllers
@@ -30,7 +31,7 @@ namespace csharp_dotnetcore_projects.Controllers
         }
 
         // GET api/projects/5
-        [HttpGet("{id}", Name ="GetById")]
+        [HttpGet("{id}", Name = "GetProjectById")]
         public ActionResult<Project> Get(string id)
         {
             var projectFound = context.Projects
@@ -50,7 +51,7 @@ namespace csharp_dotnetcore_projects.Controllers
             {
                 context.Projects.Add(value);
                 context.SaveChanges();
-                return new CreatedAtRouteResult("GetById", new { id = value.Id});
+                return new CreatedAtRouteResult("GetProjectById", new { id = value.Id});
             }
             return BadRequest(ModelState);
         }
@@ -79,8 +80,17 @@ namespace csharp_dotnetcore_projects.Controllers
 
         // DELETE api/values/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public ActionResult<Project> Delete(string id)
         {
+            var projectFound = context.Projects
+               .FirstOrDefault(project => project.Id.Equals(id));
+            if (projectFound == null)
+            {
+                return NotFound();
+            }
+            context.Projects.Remove(projectFound);
+            context.SaveChanges();
+            return Ok();
         }
     }
 }

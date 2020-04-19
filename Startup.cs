@@ -52,7 +52,9 @@ namespace csharp_dotnetcore_projects
 
             // Set Mock Data
             MockDataProjects mockDataProjects = new MockDataProjects(applicationDbContext);
+            MockDataTasks mockDataTasks = new MockDataTasks(applicationDbContext);
             mockDataProjects.SetData();
+            mockDataTasks.SetData();
         }
     }
 }

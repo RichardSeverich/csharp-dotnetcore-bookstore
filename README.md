@@ -37,7 +37,7 @@ https://localhost:5001/
 ## Diagrams 💎
 
 
-## EnD Points 🔍
+## End Points 🔍
 
 ### Projects
 
@@ -77,38 +77,42 @@ DELETE PROJECTS
 https://localhost:5001/api/projects/c903a85d
 ```
 
-### ITEMS
+### Tasks
 
 ```
-GET ITEMS
-{Host}:{Port}/api/v1/items
-{Host}:{Port}/api/v1/items/{item_id}
-localhost:8080/api/v1/items
-localhost:8080/api/v1/items/1001
+GET TASKS
+{Host}:{Port}/api/v1/tasks
+{Host}:{Port}/api/v1/tasks/{task_id}
+https://localhost:5001/api/tasks
+https://localhost:5001/api/tasks/86dba5c3
 
-POST ITEMS
-{Host}:{Port}/api/v1/items
-localhost:8080/api/v1/items
+POST TASKS
+{Host}:{Port}/api/v1/tasks
+https://localhost:5001/api/tasks
 BODY:
 {
-    "name": "Drink RedBeer",
-    "price": 35,
-    "stock": 25
+  "name": "Escribir Documentacion",
+  "description": "Escribir Documentacion",
+  "state": "In-Progress",
+  "owner": "Goku",
+  "createdDate": "27-05-2019"
 }
 
-PUT ITEMS
-{Host}:{Port}/api/v1/items/{item_id}
-localhost:8080/api/v1/items/1001
+PUT TASKS
+{Host}:{Port}/api/v1/tasks/{task_id}
+https://localhost:5001/api/projects/c903a85d
 BODY:
 {
-    "name": "Drink GreenBeer",
-    "price": 25,
-    "stock": 15
+  "name": "Escribir Documentacion",
+  "description": "Escribir Documentacion",
+  "state": "In-Progress",
+  "owner": "Vegeta",
+  "createdDate": "27-05-2019"
 }
 
-DELETE ITEMS
-{Host}:{Port}/api/v1/items/{item_id}
-localhost:8080/api/v1/items/1001
+DELETE TASKS
+{Host}:{Port}/api/v1/tasks/{task_id}
+https://localhost:5001/api/projects/c903a85d
 ```
 
 ## Contributing 💡
@@ -120,5 +124,13 @@ localhost:8080/api/v1/items/1001
 5. Submit a pull request.
 
 ## MIT License 📃
+Copyright <2020> <COPYRIGHT Richard Severich>
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), 
+to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, 
+and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, 
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

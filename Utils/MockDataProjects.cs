@@ -20,31 +20,31 @@ namespace csharp_dotnetcore_projects.Utils
                 new Project(){
                    Name = "Proyecto Seguridad",
                    Description = "Proyecto de Seguridad",
-                   State = "Inactivo",
+                   State = "Inactive",
                    CreatedDate = "27-05-2019"
                 },
                 new Project(){
                    Name = "Proyecto Educacion",
                    Description = "Proyecto de Educacion",
-                   State = "Activo",
+                   State = "Active",
                    CreatedDate = "01-01-2020"
                 },
                 new Project(){
                    Name = "Proyecto Deportes",
                    Description = "Proyecto de Deportes",
-                   State = "Activo",
+                   State = "Active",
                    CreatedDate = "01-01-2020"
                 },
                 new Project(){
                    Name = "Proyecto Informatica",
                    Description = "Proyecto de Informatica",
-                   State = "Activo",
+                   State = "Active",
                    CreatedDate = "01-01-2020"
                 },
                 new Project(){
                    Name = "Proyecto Ingenieria",
                    Description = "Proyecto de Ingenieria",
-                   State = "Activo",
+                   State = "Active",
                    CreatedDate = "28-02-2020"
                 }
             });
