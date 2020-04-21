@@ -10,6 +10,8 @@ dotnet new webapi
 
 This project is using UseInMemory Database, Entity Framework Core and Dependency injection.
 
+This project is using washbuckle.AspNetCore version 4.0.1 compatible with Microsoft.AspNetCore.Mvc.Core (>= 2.0.0).
+
 ## Prerequisites 🚀
 
 1. Install Windows 10 or Linux
@@ -39,6 +41,12 @@ https://localhost:5001/
 ## Diagrams 💎
 
 ## End Points 🔍
+
+After run app you can see documentation in https://localhost:5001/swagger/index.html
+
+<p align="center">
+  <img src="Documentation/swagger.jpg">
+</p>
 
 ### Projects
 
