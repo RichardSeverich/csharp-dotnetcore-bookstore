@@ -37,6 +37,19 @@ dotnet run
 http://localhost:5000/
 https://localhost:5001/
 ```
+
+3. run with docker: you can execute the following scripts
+
+```
+1. create a image: docker_bin/run-create-image.sh
+2. create an run container:  docker_bin/run-create-container.sh
+```
+
+4. The app for example starts on:
+```
+http://192.168.0.100:8080/api/projects
+```
+
  
 ## Diagrams 💎
 
